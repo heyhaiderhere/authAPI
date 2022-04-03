@@ -5,12 +5,12 @@ import userRouter from "./routes/userRoutes.js";
 import cors from "cors";
 dotenv.config();
 const PORT = process.env.PORT;
-// app.use(
-//   cors({
-//     origin: "*",
-//   })
-// );
 const app = express();
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(express.json());
 
 // connecting to mongoDB
