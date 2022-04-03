@@ -8,6 +8,6 @@ import { privateRoute } from "../middlewares/authMiddleware.js";
 const router = express.Router();
 
 router.post("/register", registerUser);
-router.get("/login", userLogin);
+router.post("/login", userLogin);
 router.get("/profile", privateRoute, getUserProfile);
 export default router;
